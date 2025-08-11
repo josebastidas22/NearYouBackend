@@ -4,9 +4,6 @@ const dotenv = require('dotenv');
 const cors = require('cors');
 const morgan = require('morgan'); // 👈 Logging útil para desarrollo
 
-// 🔍 Mensaje para verificar versión en Render
-console.log("🚀 Backend NearYou versión PRUEBA-2025-08-11");
-
 // 1. Cargar variables de entorno
 dotenv.config({ path: './config.env' });
 
@@ -15,8 +12,8 @@ const app = express();
 
 // 3. Middlewares globales
 app.use(cors());                  // Permitir peticiones desde frontend (móvil/web)
-app.use(express.json());         // Habilitar lectura de JSON en peticiones
-app.use(morgan('dev'));          // 👈 Log de rutas usadas (opcional pero útil)
+app.use(express.json());          // Habilitar lectura de JSON en peticiones
+app.use(morgan('dev'));           // 👈 Log de rutas usadas (opcional pero útil)
 
 // 4. Ruta de prueba (inicio)
 app.get('/', (req, res) => {
