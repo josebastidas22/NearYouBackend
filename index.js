@@ -4,6 +4,9 @@ const dotenv = require('dotenv');
 const cors = require('cors');
 const morgan = require('morgan'); // 👈 Logging útil para desarrollo
 
+// 🔍 Mensaje para verificar versión en Render
+console.log("🚀 Backend NearYou versión PRUEBA-2025-08-11");
+
 // 1. Cargar variables de entorno
 dotenv.config({ path: './config.env' });
 
